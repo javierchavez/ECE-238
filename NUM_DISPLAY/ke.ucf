@@ -1,0 +1,27 @@
+##Display
+NET "s<0>" LOC = "M13"; #DP
+NET "s<1>" LOC = "T17"; # a
+NET "s<2>" LOC = "T18"; # b
+NET "s<3>" LOC = "U17"; # c
+NET "s<4>" LOC = "U18"; # d
+NET "s<5>" LOC = "M14"; # e
+NET "s<6>" LOC = "N14"; # f
+NET "s<7>" LOC = "L14"; # g
+
+
+
+
+
+## Buttons
+
+NET "b<0>"         LOC = "A8"  ;#| IOSTANDARD = "LVCMOS33";   #Bank = 0, Pin name = IO_L33N,                           Sch name = BTNU
+NET "b<1>"         LOC = "C4"  ;#| IOSTANDARD = "LVCMOS33";   #Bank = 0, Pin name = IO_L1N_VREF,                       Sch name = BTNL
+NET "b<2>"         LOC = "C9"  ;#| IOSTANDARD = "LVCMOS33";   #Bank = 0, Pin name = IO_L34N_GCLK18,                    Sch name = BTND
+NET "b<3>"         LOC = "D9"  ;#| IOSTANDARD = "LVCMOS33";   #Bank = 0, Pin name = IO_L34P_GCLK19,                    Sch name = BTNR
+
+
+# Outputs
+NET "EN<3>" LOC = "P17"; # anode (1st display from left to right)
+NET "EN<2>" LOC = "P18"; # anode (2nd display from left to right)
+NET "EN<1>" LOC = "N15"; # anode (3rd display from left to right)
+NET "EN<0>" LOC = "N16"; # anode (4th display from left to right)
