@@ -20,15 +20,15 @@ architecture Behavioral of DispDec is
 
 begin
 
-	-- array of not gates
-	b(0) <=  '0'; --	top most seg 		NOT NEEDED
-	b(1) <=  MUX_OUT;  --	right top 
-	b(2) <=  MUX_OUT;  --	right botton 
-	b(3) <=  not MUX_OUT; -- bottom
-	b(4) <=  '1'; --	left bottom always on
-	b(5) <=  '1'; --	left top		always on
-	b(6) <=  MUX_OUT; -- 	middle		
-	b(7) <=  '0'; -- 	decimal point 	NOT NEEDED
+    -- array of not gates
+    b(0) <=  '0'; --    top most seg        NOT NEEDED
+    b(1) <=  MUX_OUT;  --   right top 
+    b(2) <=  MUX_OUT;  --   right botton 
+    b(3) <=  not MUX_OUT; -- bottom
+    b(4) <=  '1'; --    left bottom always on
+    b(5) <=  '1'; --    left top        always on
+    b(6) <=  MUX_OUT; --    middle      
+    b(7) <=  '0'; --    decimal point   NOT NEEDED
 
 
 end Behavioral;

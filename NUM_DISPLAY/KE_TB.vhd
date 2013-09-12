@@ -50,7 +50,7 @@ ARCHITECTURE behavior OF KE_TB IS
    --Inputs
    signal b : std_logic_vector(3 downto 0) := (others => '0');
 
- 	--Outputs
+  --Outputs
    signal e : std_logic_vector(2 downto 0);
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
@@ -59,7 +59,7 @@ ARCHITECTURE behavior OF KE_TB IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+  -- Instantiate the Unit Under Test (UUT)
    uut: KE PORT MAP (
           b => b,
           e => e
@@ -69,13 +69,13 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
+   begin    
       -- hold reset state for 100 ns.
-		b <= "0001"; wait for 100 ns;	
-		b <= "0010"; wait for 100 ns;	
-		b <= "0100"; wait for 100 ns;	
-		b <= "1000"; wait for 100 ns;	
-		b <= "0000"; wait;	
+    b <= "0001"; wait for 100 ns; 
+    b <= "0010"; wait for 100 ns; 
+    b <= "0100"; wait for 100 ns; 
+    b <= "1000"; wait for 100 ns; 
+    b <= "0000"; wait;  
 
    end process;
 

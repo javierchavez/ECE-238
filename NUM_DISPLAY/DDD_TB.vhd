@@ -50,7 +50,7 @@ ARCHITECTURE behavior OF DDD_TB IS
    --Inputs
    signal e : std_logic_vector(2 downto 0) := (others => '0');
 
- 	--Outputs
+  --Outputs
    signal s : std_logic_vector(7 downto 0);
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
@@ -59,7 +59,7 @@ ARCHITECTURE behavior OF DDD_TB IS
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+  -- Instantiate the Unit Under Test (UUT)
    uut: DDD PORT MAP (
           e => e,
           s => s
@@ -68,14 +68,14 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
+   begin    
       -- hold reset state for 100 ns.
       
-		e <= "000"; wait for 100 ns;	
-		e <= "001"; wait for 100 ns;	
-		e <= "010"; wait for 100 ns;	
-		e <= "011"; wait for 100 ns;	
-		e <= "111"; wait;
+    e <= "000"; wait for 100 ns;  
+    e <= "001"; wait for 100 ns;  
+    e <= "010"; wait for 100 ns;  
+    e <= "011"; wait for 100 ns;  
+    e <= "111"; wait;
    end process;
 
 END;

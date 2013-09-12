@@ -20,39 +20,39 @@ begin
 
 --chasing 1
 s(7) <= (not(e(2)) and e(1) and not(e(0))) or 
-			(not(e(2)) and e(1) and e(0));
-			
+            (not(e(2)) and e(1) and e(0));
+            
 --chasing 1
 s(6) <= not(e(2)) and not(e(1)) and not(e(0));
 
 --chasing 0
 s(5) <= not(
-				(not(e(2)) and not(e(1)) and e(0)) or
-				(not(e(2)) and e(1) and e(0)) or
-				(e(2) and e(1) and e(0))
-				);
---chasing 1			
+                (not(e(2)) and not(e(1)) and e(0)) or
+                (not(e(2)) and e(1) and e(0)) or
+                (e(2) and e(1) and e(0))
+                );
+--chasing 1         
 --s(5) <= (not(e(2)) or not(e(1)) or not(e(0))) and
---			(not(e(2)) or e(1) or not(e(0)));
-				
+--          (not(e(2)) or e(1) or not(e(0)));
+                
 --chasing 0
 s(4) <= not(
-				(not(e(2)) and not(e(1)) and e(0)) or
-				(e(2) and e(1) and e(0))
-				);
---chasing 0		
+                (not(e(2)) and not(e(1)) and e(0)) or
+                (e(2) and e(1) and e(0))
+                );
+--chasing 0     
 s(3) <= not(
-				(not(e(2)) and e(1) and not(e(0))) or 
-				(e(2) and e(1) and e(0)) 
-				);
---chasing 0		
+                (not(e(2)) and e(1) and not(e(0))) or 
+                (e(2) and e(1) and e(0)) 
+                );
+--chasing 0     
 s(2) <= not(e(2) and e(1) and e(0));
 
 --chasing 0
 s(1) <= not(
-				(not(e(2)) and not(e(1)) and e(0)) or
-				(e(2) and e(1) and e(0))
-				);
+                (not(e(2)) and not(e(1)) and e(0)) or
+                (e(2) and e(1) and e(0))
+                );
 --decimal point is never on
 s(0) <= not('1');
 

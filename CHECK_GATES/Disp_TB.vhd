@@ -32,14 +32,14 @@ ARCHITECTURE behavior OF Disp_TB IS
    --Inputs
    signal MUX_OUT : std_logic := '0';
 
- 	--Outputs
+  --Outputs
    signal B : std_logic_vector(7 downto 0);
    -- No clocks detected in port list. Replace <clock> below with 
    -- appropriate port name 
  
 BEGIN
  
-	-- Instantiate the Unit Under Test (UUT)
+  -- Instantiate the Unit Under Test (UUT)
    uut: DispDec PORT MAP (
           MUX_OUT => MUX_OUT,
           B => B
@@ -50,11 +50,11 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
+   begin    
 
-	wait for 100 ns;
-	MUX_OUT <= '1'; wait for 100 ns;
-	MUX_OUT <= '0'; wait;
+  wait for 100 ns;
+  MUX_OUT <= '1'; wait for 100 ns;
+  MUX_OUT <= '0'; wait;
 
    end process;
 

@@ -13,9 +13,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity CHECK_GATES is
     Port ( SW : in  STD_LOGIC_VECTOR (1 downto 0);
-			  SWSEL : in  STD_LOGIC_VECTOR (2 downto 0);
+        SWSEL : in  STD_LOGIC_VECTOR (2 downto 0);
            AX : out  STD_LOGIC_VECTOR (3 downto 0);
-			  LED : out  STD_LOGIC_VECTOR (4 downto 0);
+        LED : out  STD_LOGIC_VECTOR (4 downto 0);
            DISP : out  STD_LOGIC_VECTOR (7 downto 0));
 end CHECK_GATES;
 
@@ -54,14 +54,14 @@ D(7) <= SW(0) xnor SW(1);
 
 -- MUX Mod 2
 MUX : MUX8to1 port map(
-	D => D,
-	S => SWSEL,
-	MUX_OUT => mo
+  D => D,
+  S => SWSEL,
+  MUX_OUT => mo
 );
 -- DispDec Mod3
 DD : DispDec port map(
-		MUX_OUT => mo,
-		B => segs
+    MUX_OUT => mo,
+    B => segs
 );
 
 -- Active LOW display

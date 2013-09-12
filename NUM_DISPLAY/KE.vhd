@@ -23,15 +23,15 @@ architecture Behavioral of KE is
 begin
 --chasing 0
 e(0) <= not(
-				(not(b(3)) and not(b(2)) and not(b(1)) and b(0)) or 
-				(not(b(3)) and b(2) and not(b(1)) and not(b(0)))
-				);
---chasing 0				
+                (not(b(3)) and not(b(2)) and not(b(1)) and b(0)) or 
+                (not(b(3)) and b(2) and not(b(1)) and not(b(0)))
+                );
+--chasing 0             
 e(1) <= not(
-				(not(b(3)) and not(b(2)) and b(1) and not(b(0))) or 
-				(not(b(3)) and not(b(2)) and not(b(1)) and b(0))
-				);
-				
+                (not(b(3)) and not(b(2)) and b(1) and not(b(0))) or 
+                (not(b(3)) and not(b(2)) and not(b(1)) and b(0))
+                );
+                
 --chasing 1
 e(2) <= not(b(3)) and not(b(2)) and not(b(1)) and not(b(0));
 
